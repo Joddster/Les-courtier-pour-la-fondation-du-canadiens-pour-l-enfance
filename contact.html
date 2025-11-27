@@ -1,0 +1,233 @@
+<!DOCTYPE html><html lang="fr"><head>
+<meta charset="utf-8"><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport">
+<title>Nous contacter — Fondation des Canadiens pour l’enfance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#AF1E2D; --blue:#001E62; --navy:#0C1E54; --ink:#0B1324; --muted:#5B6474;
+  --line:#E6EAF2; --bg:#FFFFFF; --soft:#F4F7FF; --soft2:#FAFBFF; --shadow:0 6px 20px rgba(12,30,84,.08);
+}
+*{box-sizing:border-box} html,body{height:100%}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;background:var(--bg);color:var(--ink)}
+.topflag{height:4px;background:linear-gradient(90deg,var(--red) 0%, var(--red) 50%, var(--blue) 50%, var(--blue) 100%)}
+.container{max-width:960px;margin:0 auto;padding:0 16px}
+header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.head{display:flex;align-items:center;gap:12px;padding:10px 16px}
+.brand .logo{height:58px;width:auto;display:block;object-fit:contain}
+.spacer{flex:1}
+.cta{border-radius:14px;padding:12px 24px;font-weight:800;background:var(--red);color:#fff;text-decoration:none;transition:all .25s ease}
+.cta:hover{background:#8E1725;box-shadow:0 3px 10px rgba(175,30,45,.35)}
+.hero-wrap{background:linear-gradient(180deg,var(--soft) 0%, var(--soft2) 100%);border-bottom:1px solid var(--line)}
+.hero{padding:32px 16px 40px;display:grid;gap:14px;max-width:760px;margin:0 auto;text-align:center}
+.kicker{color:var(--blue);font-weight:800;font-size:12px;letter-spacing:.35px;text-transform:uppercase}
+h1{font-size:32px;line-height:1.2;margin:0;color:var(--navy)}
+.hero p{margin:0;color:#2B3545;font-size:18px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:6px}
+.hero .actions a{border-radius:12px;padding:12px 18px;font-weight:700;text-decoration:none}
+.hero .actions .primary{background:var(--blue);color:#fff}
+.hero .actions .secondary{border:1px solid var(--line);color:var(--blue);background:#fff}
+section{padding:32px 16px;border-bottom:1px solid var(--line)}
+.grid{display:grid;gap:18px}
+@media (min-width:720px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:var(--shadow);padding:22px;display:grid;gap:10px}
+.card .label{font-weight:800;color:var(--blue);text-transform:uppercase;font-size:12px;letter-spacing:.3px}
+.card h3{margin:0;font-size:20px;color:var(--navy)}
+.card p{margin:0;color:#3A4355;font-size:15px}
+.card a{color:var(--red);font-weight:700;text-decoration:none}
+.highlight{border-radius:22px;background:#fff;box-shadow:var(--shadow);padding:24px;display:grid;gap:16px;border:1px solid var(--line)}
+.highlight h2{margin:0;font-size:22px;color:var(--navy)}
+.highlight ul{margin:0;padding-left:18px;color:#3A4355}
+form{display:grid;gap:16px}
+input,textarea,select{width:100%;padding:14px 16px;border-radius:14px;border:1px solid var(--line);font:inherit;background:#fff}
+textarea{min-height:140px;resize:vertical}
+form button{border-radius:14px;border:0;background:var(--red);color:#fff;font-weight:800;padding:14px 20px;cursor:pointer}
+form button:hover{background:#8E1725}
+.info-list{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.info-list li{display:flex;gap:14px;align-items:flex-start;color:#3A4355}
+.info-list strong{color:var(--navy);display:block}
+.tabs{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+.tabs .row{display:flex;gap:14px;overflow:auto;padding:10px 16px}
+.tabs .tab{text-decoration:none;font-weight:800;color:#23304C;white-space:nowrap;padding:8px 10px;border-radius:10px}
+.tabs .tab.active{color:#001E62;background:#F3F6FF;border:1px solid #E6EAF2}
+footer{padding:28px 16px;text-align:center;color:#4B5563}
+.footnav{margin:18px 0 0;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.footnav a{color:#23304C;text-decoration:none;font-weight:700}
+.burger{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:52px;height:52px;background:transparent;border:0;cursor:pointer}
+.burger-bar{width:36px;height:5px;margin:4px 0;border-radius:3px;background:#1a2d7d}
+.mega-menu{position:fixed;inset:0;background:#0b0b0c;color:#f5f5f7;transform:translateY(-100%);transition:transform .4s cubic-bezier(.4,0,.2,1);z-index:1000;-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px)}
+.mega-menu.is-open{transform:translateY(0)}
+.mega-inner{max-width:980px;margin:0 auto;padding:96px 24px 48px}
+.menu-close{position:absolute;right:24px;top:20px;background:transparent;border:0;color:#f5f5f7;font-size:28px;line-height:1;cursor:pointer}
+.mega-list{list-style:none;padding:0;margin:40px 0 24px}
+.mega-list li{margin:10px 0}
+.mega-list a{display:block;font-size:40px;line-height:1.1;color:#f5f5f7;text-decoration:none;padding:10px 0}
+.mega-list a:hover{text-decoration:underline}
+.mega-secondary{margin-top:32px;display:flex;flex-wrap:wrap;gap:16px}
+.mega-secondary a{color:#a1a1a6;text-decoration:none;font-size:16px}
+.mega-secondary a:hover{text-decoration:underline}
+@media (min-width:768px){
+  .mega-inner{padding-top:120px}
+  .mega-list a{font-size:56px}
+}
+</style>
+</head><body>
+<div class="topflag"></div>
+<header>
+  <div class="head container">
+    <div class="brand"><img class="logo" src="https://upload.wikimedia.org/wikipedia/fr/thumb/8/83/Logo_Canadiens_Montr%C3%A9al.svg/320px-Logo_Canadiens_Montr%C3%A9al.svg.png" alt="Logo Fondation des Canadiens pour l’enfance"></div>
+    <span class="spacer"></span>
+    <a class="cta" href="don.html">Je donne</a>
+    <button class="burger" aria-label="Ouvrir le menu" aria-controls="megaMenu" aria-expanded="false">
+      <span class="burger-bar"></span>
+      <span class="burger-bar"></span>
+      <span class="burger-bar"></span>
+    </button>
+  </div>
+  <nav class="tabs">
+    <div class="row container">
+      <a class="tab" href="index.html">Accueil</a>
+      <a class="tab" href="la-fondation.html">La fondation</a>
+      <a class="tab" href="membres.html">Membres</a>
+      <a class="tab" href="evenements.html">Événements</a>
+      <a class="tab" href="medias.html">Photos & vidéos</a>
+      <a class="tab active" href="contact.html">Nous contacter</a>
+      <a class="tab" href="don.html">Je donne</a>
+    </div>
+  </nav>
+</header>
+<div class="hero-wrap">
+  <div class="hero">
+    <div class="kicker">On est là pour vous</div>
+    <h1>Parlons de vos projets pour la jeunesse.</h1>
+    <p>Questions médias, partenariats, adhésion ou dons majeurs — écrivez-nous et une personne dédiée vous répond sous 24 h ouvrables.</p>
+    <div class="actions">
+      <a class="primary" href="mailto:bonjour@fondationcanadiens.ca?subject=Contact%20Fondation">bonjour@fondationcanadiens.ca</a>
+      <a class="secondary" href="tel:+15148670600">+1 514 867-0600</a>
+    </div>
+  </div>
+</div>
+<section>
+  <div class="container grid">
+    <article class="card">
+      <div class="label">Général</div>
+      <h3>Service aux partenaires</h3>
+      <p>Lundi au vendredi · 9 h à 17 h (HE)</p>
+      <a href="mailto:partenaires@fondationcanadiens.ca?subject=Partenariat">Écrire à l’équipe</a>
+    </article>
+    <article class="card">
+      <div class="label">Médias</div>
+      <h3>Demandes presse</h3>
+      <p>Communiqués, entrevues, visites terrain.</p>
+      <a href="mailto:medias@fondationcanadiens.ca?subject=Demande%20m%C3%A9dia">medias@fondationcanadiens.ca</a>
+    </article>
+    <article class="card">
+      <div class="label">Urgent</div>
+      <h3>Ligne express donateurs</h3>
+      <p>Réponse prioritaire &lt; 2 h pour les dons majeurs.</p>
+      <a href="tel:+15148670606">+1 514 867-0606</a>
+    </article>
+  </div>
+</section>
+<section>
+  <div class="container highlight">
+    <h2>Prendre rendez-vous</h2>
+    <p>Choisissez un créneau virtuel de 30 minutes avec la direction philanthropique pour discuter de votre implication.</p>
+    <ul>
+      <li>Présentation du programme « Courtiers pour la fondation »</li>
+      <li>Activation conjointe pour vos événements clients</li>
+      <li>Dons planifiés et legs</li>
+    </ul>
+    <a class="primary" href="https://calendly.com/" target="_blank" rel="noopener" style="justify-self:start;text-decoration:none;padding:12px 18px;border-radius:14px;background:var(--blue);color:#fff;font-weight:700">Ouvrir l’agenda Calendly</a>
+  </div>
+</section>
+<section>
+  <div class="container" style="display:grid;gap:32px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+    <div>
+      <h2 style="margin:0 0 12px;font-size:22px;color:var(--navy)">Écrivez-nous directement</h2>
+      <form action="mailto:bonjour@fondationcanadiens.ca" method="post" enctype="text/plain">
+        <input name="nom" placeholder="Nom complet" required>
+        <input type="email" name="email" placeholder="Courriel" required>
+        <select name="sujet">
+          <option value="">Choisir un sujet</option>
+          <option>Partenariats & commandites</option>
+          <option>Médias / communications</option>
+          <option>Membres & courtiers</option>
+          <option>Autre</option>
+        </select>
+        <textarea name="message" placeholder="Message" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+    <div>
+      <h2 style="margin:0 0 12px;font-size:22px;color:var(--navy)">Informations pratiques</h2>
+      <ul class="info-list">
+        <li>
+          <div>
+            <strong>Adresse</strong>
+            1909, avenue des Canadiens-de-Montréal<br>Montréal (QC) H4B 5G0
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Réseaux sociaux</strong>
+            <a href="https://www.instagram.com/canadiensmtl" target="_blank" rel="noopener">Instagram</a> ·
+            <a href="https://www.facebook.com/canadiensmtl" target="_blank" rel="noopener">Facebook</a> ·
+            <a href="https://www.linkedin.com/company/club-de-hockey-canadien" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Numéro d’organisme</strong>
+            #119451876RR0001 — Fondation des Canadiens pour l’enfance
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footnav">
+    <a href="index.html">Accueil</a>
+    <a href="la-fondation.html">La fondation</a>
+    <a href="membres.html">Membres</a>
+    <a href="evenements.html">Événements</a>
+    <a href="medias.html">Photos & vidéos</a>
+    <a href="don.html">Je donne</a>
+  </div>
+  <small>© Fondation des Canadiens pour l’enfance · Ensemble on change la donne.</small>
+</footer>
+<div class="mega-menu" id="megaMenu">
+  <div class="mega-inner">
+    <button class="menu-close" aria-label="Fermer le menu">&times;</button>
+    <ul class="mega-list">
+      <li><a href="index.html#mission">Mission</a></li>
+      <li><a href="membres.html">Programme membres</a></li>
+      <li><a href="la-fondation.html">Projets sur le terrain</a></li>
+      <li><a href="don.html">Faire un don</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="mega-secondary">
+      <a href="evenements.html">Événements</a>
+      <a href="medias.html">Photos & vidéos</a>
+      <a href="membres.html#faq">FAQ</a>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  const menu = document.getElementById('megaMenu');
+  const burger = document.querySelector('.burger');
+  const close = document.querySelector('.menu-close');
+  function toggle(open){
+    menu.classList[open?'add':'remove']('is-open');
+    burger?.setAttribute('aria-expanded',open);
+  }
+  burger?.addEventListener('click',()=>toggle(!menu.classList.contains('is-open')));
+  close?.addEventListener('click',()=>toggle(false));
+  menu?.addEventListener('click',e=>{if(e.target===menu)toggle(false)});
+})();
+</script>
+</body></html>
+
